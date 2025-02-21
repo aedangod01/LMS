@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace aedan\User\Http\Controllers\Auth;
+
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
