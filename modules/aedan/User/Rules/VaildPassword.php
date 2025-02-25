@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Rules;
+namespace aedan\User\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 
-class VaildMobile implements Rule
+class VaildPassword implements Rule
 {
     /**
      * Create a new rule instance.
@@ -25,7 +25,7 @@ class VaildMobile implements Rule
      */
     public function passes($attribute, $value)
     {
-        return preg_match('/^9[0-9]{9}$/', $value);
+        return preg_match('/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{6,}$/', $value);
 
     }
 

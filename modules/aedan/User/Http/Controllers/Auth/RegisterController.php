@@ -2,10 +2,11 @@
 
 namespace aedan\User\Http\Controllers\Auth;
 
+use aedan\User\Models\User;
 use App\Http\Controllers\Controller;
-use App\Models\User;
-use App\Rules\VaildMobile;
-use App\Rules\VaildPassword;
+use Aedan\User\Rules\VaildMobile;
+use Aedan\User\Rules\VaildPassword;
+
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -62,7 +63,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\Models\User
+     * @return \aedan\User\Models\User
      */
     protected function create(array $data)
     {
@@ -72,5 +73,9 @@ class RegisterController extends Controller
             'mobile' => $data['mobile'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+    public function showRegistrationForm()
+    {
+        return view('User::Front.register');
     }
 }
