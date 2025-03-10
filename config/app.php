@@ -182,7 +182,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         \aedan\User\Providers\UserServiceProvider::class,
-
+        \aedan\Dashboard\Providers\DashboardServiceProvider::class,
+        \aedan\Category\Providers\CategoryServiceProvider::class,
         /*
          * Package Service Providers...
          */

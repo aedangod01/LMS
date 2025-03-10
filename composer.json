@@ -25,6 +25,8 @@
         "psr-4": {
             "App\\": "app/",
             "Aedan\\User\\": "modules/aedan/User",
+            "Aedan\\Dashboard\\": "modules/aedan/Dashboard",
+            "Aedan\\Category\\": "modules/aedan/Category",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }
